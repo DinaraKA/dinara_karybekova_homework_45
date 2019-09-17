@@ -1,0 +1,112 @@
+body {
+    background: thistle;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+}
+.table {
+    width: 100%;
+}
+
+.navbar {
+    display: block;
+    background: rgb(51,58,64);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+
+.menu {
+    font-size: 16px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #fffee8;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+
+.menu a:hover {
+    color: darkviolet;
+    text-decoration: underline;
+}
+
+table a{
+    color: rgb(51,58,64);
+    font-weight: bold;
+    text-decoration: underline;
+}
+table a:hover {
+    color: darkviolet;
+    text-decoration: underline;
+}
+.btn {
+    width: 150px;
+    margin: 10px;
+}
+.btn:hover {
+    color: darkviolet;
+}
+form label {
+    font-weight: bold;
+}
+
+.delete-X {
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.edit {
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.change_status {
+    text-decoration: none;
+}
+
+textarea {
+    white-space: pre-wrap;
+}
+.btn-dark a{
+    margin-top: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn-dark a:hover{
+    color: darkviolet;
+}
+.card {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+

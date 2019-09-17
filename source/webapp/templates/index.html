@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <li><a href="{% url 'task_add' %}">Добавить задачу</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Список задач:</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Статус</th>
+                <th scope="col">Дата</th>
+                <th scope="col">Изменить</th>
+                <th scope="col">Удалить</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td><a href="{% url 'task_view' task.pk %}">{{ task.description}}</a></td>
+                    <td class="change_status" href="{% url 'task_edit' task.pk %}">{{ task.get_status_display }}</td>
+                    <td>{{ task.date }}</td>
+                    <td><a class="edit" href="{% url 'task_edit' task.pk %}">&#x270E;</a></td>
+                    <td><a class="delete-X" href="{% url 'task_delete' task.pk %}">X</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+
+
+
+

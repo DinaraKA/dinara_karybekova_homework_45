@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Удалить задачу{% endblock %}
+{% block content %}
+    <form method="POST" action="{% url 'task_delete' task.pk %}">
+        {% csrf_token %}
+        <div class="card text-center" style="width: 100%;">
+            <div class="card-header text-white bg-dark">{{ task.description }}</div>
+            <div class="card-body">
+                <h5 class="card-title">Вы уверены, что хотите удалить задачу?</h5>
+                <button type="submit" class="btn btn-dark" value="Подтвердить">Подтвердить</button>
+                <button type="submit" class="btn btn-dark" value="Submit"><a href="{% url 'task_view' task.pk %}">Отменить</a></button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

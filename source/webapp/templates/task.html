@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Задача{% endblock %}
+{% block content %}
+    <div class="card text-white bg-dark" style="width: 100%;">
+        <div class="card-header">{{ task.description }}</div>
+        <ul class="list-group list-group-flush text-dark">
+            <li class="list-group-item"><b>Статус: </b>{{ task.get_status_display }}</li>
+            <li class="list-group-item" style="white-space: pre-wrap"><b>Детали: </b>{{ task.details }}</li>
+            <li class="list-group-item"><b>Дата: </b>{{ task.date }}</li>
+        </ul>
+    </div>
+    <button type="submit" class="btn btn-dark" value="Submit" id="input"><a href="{% url 'task_edit' task.pk %}">Обновить</a></button>
+{% endblock %}
+
+
